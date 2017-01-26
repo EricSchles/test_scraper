@@ -19,6 +19,6 @@ def scrape():
 @app.route("/", methods=["GET","POST"])
 def index():
     pages = [elem.page[:10] for elem in HTML.query.all()]
-    total_links = sum([elem.links.split(",") for elem in HTML.query.all()])
+    total_links = sum([len(elem.links.split(",")) for elem in HTML.query.all()])
     return render_template("index.html", pages=pages, total_links=total_links)
 
