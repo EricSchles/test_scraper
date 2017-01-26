@@ -4,4 +4,4 @@ flask-migrate
 gunicorn
 psycopg2
 requests
-lxml.html
+lxml
